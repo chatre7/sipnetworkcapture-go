@@ -1,0 +1,14 @@
+[Unit]
+Description=TRB UDP Filter Sipnetworkcapture
+After=network.target
+
+[Service]
+ExecStart=/root/app/sipnetworkcapture-go
+WorkingDirectory=/root
+Restart=always
+User=root
+Group=root
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=multi-user.target
