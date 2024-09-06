@@ -56,7 +56,7 @@ func main() {
 
 	var network *pcap.Interface
 	for _, device := range devices {
-		if strings.Contains(device.Description, deviceName) {
+		if strings.Contains(device.Name, deviceName) {
 			network = &device
 			break
 		}
